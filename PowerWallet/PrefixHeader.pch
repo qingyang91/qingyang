@@ -1,0 +1,47 @@
+//
+//  PrefixHeader.pch
+//  PowerWallet
+//
+//  Created by lxw on 17/1/23.
+//  Copyright © 2017年 lxw. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#define ScreenRateFor6     SCREEN_WIDTH/375.0
+#define ScreenRateFor5     SCREEN_WIDTH/320.0
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "BaseDefinition.h"
+#import "NetworkSingleton.h"
+#import "Constants.h"
+#import "URLDefine.h"
+#import "ColorDefine.h"
+#import "FontDefine.h"
+#import "UIView+Additions.h"
+#import "MJRefresh.h"
+#import "MXTool.h"
+#import "TipMessage.h"
+#import <Masonry.h>
+#import "UIColor+Extensions.h"
+#import "UIButton+Masonry.h"
+#import <MJExtension/MJExtension.h>
+#import "VersionJudgeRequest.h"
+#import "DXAlertView.h"
+#import "ApplicationUtil.h"
+#import "DSUtils.h"
+#import <Availability.h>
+#if TARGET_IPHONE_SIMULATOR
+#define SIMULATOR_TEST
+#else
+//不定义SIMULATOR_TEST这个宏
+#endif
+
+#endif
+
+#endif /* PrefixHeader_pch */
